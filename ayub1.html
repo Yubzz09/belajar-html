@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Pertama</title>
+
+    <script>
+        function kirim(){
+            var id_name = document.getElementById("name");
+            var id_nim = document.getElementById("nim")
+            var id_prodi = document.getElementById("prodi")
+            var id_tampil = document.getElementById("tampil")
+            id_tampil.innerText = id_name.value + ", " + id_nim.value +", " + id_prodi.value
+        }
+    </script>
 </head>
 <body>
     <h1>Data Mahasiswa</h1>
     <div>
         <label for="name">Nama :</label>
         <input type="text" id="name" name="name"><br><br>
+    </div>
+    <div>
         <label for="nim">NIM :</label>
         <input type="text" id="nim" name="nim"><br><br>
+    </div>
+    <div>
         <label for="prodi">Prodi :</label>
         <input type="text" id="prodi" name="prodi"><br><br>
     </div>
-    
+    <div>
+        <button onclick="kirim()">Kirim</button>
+    </div>
+    <div id="tampil"></div>
 </body>
 </html>
